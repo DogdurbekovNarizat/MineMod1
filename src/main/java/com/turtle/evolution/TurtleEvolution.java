@@ -33,10 +33,24 @@ public class TurtleEvolution implements ModInitializer {
 					player.addEffect(new MobEffectInstance(
 							MobEffects.NIGHT_VISION,
 							220,
-							0,
+							2,
 							true,
 							false
 					));
+                    player.addEffect(new MobEffectInstance(
+                            MobEffects.SPEED,
+                            220,
+                            2,
+                            true,
+                            false
+                    ));
+                    player.addEffect(new MobEffectInstance(
+                            MobEffects.REGENERATION,
+                            220,
+                            2,
+                            true,
+                            false
+                    ));
 					AABB box  = player.getBoundingBox().inflate(50);
 
 					var mobs = player.level().getEntitiesOfClass(Mob.class, box);
