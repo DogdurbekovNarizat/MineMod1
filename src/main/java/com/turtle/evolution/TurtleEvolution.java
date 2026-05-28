@@ -19,7 +19,7 @@ public class TurtleEvolution implements ModInitializer {
 	public void onInitialize() {
 		ServerTickEvents.END_SERVER_TICK.register(server -> {
 			server.getPlayerList().getPlayers().forEach(player -> {
-				var helmet = player.getItemBySlot(net.minecraft.world.entity.EquipmentSlot.HEAD);
+				var helmet = player.getItemBySlot(EquipmentSlot.BODY);
 
 				if (helmet.isEmpty()) {
 					return;
